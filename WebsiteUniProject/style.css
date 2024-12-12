@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'spartan', sans-serif;
+}
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+h2 {
+    font-size: 46px;
+    line-height: 64px;
+    color: #222;
+}
+h4 {
+    font-size: 46px;
+    color: #222;
+
+}
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+}
+
+.section-p1 { padding: 40px 80px; }
+
+.section-m1 { margin: 40px 0; }
+
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #088178;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body { width: 100%; }
+
+
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #000000ee;
+    box-shadow: 0 5px 15px rgb(255, 254, 254);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/* Change color of logo */
+#header .fa-tshirt {
+    color: #088178;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#navbar li{
+    list-style: none; /* To remove bullet point */
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none; /* Removes underline */
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+
+#hero{
+    background-image: url("img/bgimg.jpg");
+    height: 92vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hero h4{
+    color: #fcfcfc;
+    padding-bottom: 15px;
+}
+
+#hero h2{ color: #fcfcfc; }
+
+#hero h1{ color: #088178; }
+
+#hero p{
+    color: #C0C0C0;
+    padding-bottom: 20px;
+}
+
+
+#product{
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    flex-direction: column; /* Stacks elements vertically if needed */
+    padding: 20px;  
+    text-align: center;
+}
+
+#product .pro-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin:  40px 0;
+}
+
+#product .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;  
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Image styling so it stays in one shape */
+#product .pro img{
+    width: 100%; /* Automatically adjusts to the width of the container */
+    height: 300px; /* Define a fixed height */
+    object-fit: cover; /* To fit img and crops to defined size*/
+    border-radius: 16px;
+}
+
+#product .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product .pro .des span{
+    color: #606063;
+    font-size: 12px;
+}
+
+#product .pro .des h5{
+    padding: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#product .pro .des h4{
+     padding-top: 7px;
+     font-size: 15px;
+     font-weight: 700px;
+     color: #088178;
+}
+
+#product .pro .des p{
+    font-size: 12px;
+    font-weight: 500px;
+    color: #000000;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 15px;
+}
+
+
+/* Shopping cart button */
+.shopping-btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    bottom: 20px;
+    right: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.shopping-btn:hover {
+    background-color: #088178;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left and Right Nav button */
+.nav-btn {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #e8f6ea;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.nav-btn i {
+    font-size: 16px;
+}
+
+.nav-btn.left {
+    left: -40px;
+}
+
+.nav-btn.right {
+    right: -40px;
+}
+
+.nav-btn:hover {
+    background-color: #088178;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer Styles */
+#footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.footer-links, .footer-explore, .footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-links h4, .footer-explore h4, .footer-social h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #088178;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #088178;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social .social-icons a {
+    font-size: 16px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+    color: #088178;
+}
+
+.footer-container > div {
+    text-align: left;
+}
+
+/* For contact page */
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 155.8px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Aligns items vertically in the middle */
+    width: 100%; /* space in between */
+}
+
+.contact-item {
+    text-align: center;
+    flex: 1; /* Ensures equal width for each item */
+}
+
+.contact-icon {
+    width: 80px; /* Adjust size of the icons */
+    height: 80px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: scale(1.2); /* Hover effect to enlarge the icon */
+}
+
+.contact-item p {
+    font-size: 18px;
+    color: #333;
+}
